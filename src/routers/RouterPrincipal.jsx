@@ -1,14 +1,17 @@
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import React from 'react'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+import Header from "../layout/Header/Header";
+import Footer from "../layout/Footer/Footer";
 
 export const RouterPrincipal = () => {
   return (
-    <BrowserRouter>
-    <Routes>
-        
-    </Routes>
-    </BrowserRouter>
-
-    )
-}
-
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
+};

@@ -1,0 +1,30 @@
+#contacto {
+    font-size: 12px;
+}
+#data_fiscal {
+    width: 3rem;
+}
+
+/* div.footer{
+    background-color: rgb(44, 57, 75);
+    color: rgb(236, 219, 186);
+}
+
+div.footer h4 {
+    color: rgb(228, 69, 37);
+} */
+
+.redes-icono:hover{
+    transform: scale(1.4);
+}
+.soportes_link:hover{
+    color:darkcyan
+}
+
+.acerca_link:hover{
+    color:darkcyan 
+}
+
+.contacto_link:hover{
+    color:darkcyan 
+}
