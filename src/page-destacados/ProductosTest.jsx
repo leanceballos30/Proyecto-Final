@@ -3,7 +3,7 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 import { BsSuitHeartFill } from "react-icons/bs";
 import { MdShoppingCart } from "react-icons/md";
 
-const Productos = ({ posts, loading }) => {
+const ProductosTest = ({ posts, loading }) => {
     if (loading) {
         return <h2>Loading...</h2>;
       }
@@ -21,7 +21,7 @@ const Productos = ({ posts, loading }) => {
             <Card.Body className='d-flex flex-column'>
                 <div className=''>
                     <div className='d-flex justify-content-between container'>
-              <Card.Title className='text-primary'>Card title</Card.Title>
+              <Card.Title className='text-primary'>Card nombre</Card.Title>
               
               </div>
               <p className='bg-primary bg-opacity-10 rounded descripcion-card-producto'>
@@ -41,4 +41,4 @@ const Productos = ({ posts, loading }) => {
   )
 }
 
-export default Productos
+export default ProductosTest
