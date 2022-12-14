@@ -3,13 +3,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
-import facebook from "../../assets/footer/redes-sociales/facebook.svg";
-import instagram from "../../assets/footer/redes-sociales/instagram.svg";
-import twitter from "../../assets/footer/redes-sociales/twitter.svg";
-import phone from "../../assets/footer/contacto/smartphone.svg";
-import mail from "../../assets/footer/contacto/mail.svg";
-import map from "../../assets/footer/contacto/map-pin.svg";
-import data_fiscal from "../../assets/footer/contacto/Data-fiscal-Web.jpg"
+import facebook from "../../../assets/footer/redes-sociales/facebook.svg";
+import instagram from "../../../assets/footer/redes-sociales/instagram.svg";
+import twitter from "../../../assets/footer/redes-sociales/twitter.svg";
+import phone from "../../../assets/footer/contacto/smartphone.svg";
+import mail from "../../../assets/footer/contacto/mail.svg";
+import map from "../../../assets/footer/contacto/map-pin.svg";
+import data_fiscal from "../../../assets/footer/contacto/Data-fiscal-Web.jpg"
 
 
 
