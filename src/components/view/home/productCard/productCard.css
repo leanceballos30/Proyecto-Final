@@ -1,19 +1,30 @@
-.descripcion-card-producto{
-    height: 10vh;
-     overflow: auto;
- }
- 
- .title-precio{
-     position: absolute;
-     top: 0px;
-     background: rgba(26, 5, 5, 0.637);
- }
- 
- .boton-favorito{
-     position: absolute;
-     right: 0px;
- }
+.descripcion-card-producto {
+  height: 10vh;
+  overflow: auto;
+}
 
- img.card-img{
-    width: 10rem;
- }
+.title-precio {
+  position: absolute;
+  top: 0px;
+  background: rgba(26, 5, 5, 0.637);
+}
+
+.boton-favorito {
+  position: absolute;
+  right: 0px;
+}
+
+img.card-img {
+  width: 10rem;
+}
+
+.card {
+  height: "12rem";
+}
+
+@media (width <= 576px) {
+  .card {
+    width: 40%;
+    height: auto;
+  }
+}

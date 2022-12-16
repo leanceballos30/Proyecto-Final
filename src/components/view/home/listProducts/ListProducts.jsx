@@ -1,21 +1,18 @@
-import React from 'react'
-import { Col } from 'react-bootstrap';
-import ProductCard from '../productCard/ProductCard'
+import React from "react";
+import { Col, Row } from "react-bootstrap";
+import ProductCard from "../productCard/ProductCard";
+import Container from "react-bootstrap/Container";
 
-const ListProducts = ({products}) => {
- 
+const ListProducts = ({ products }) => {
   return (
     <>
-    {
-      products.map((p) => {
-        <Col  lg={3} md={4}>
-            <ProductCard p={p}/>
-        </Col>
-        
-      })
-    }
+      {products.map((p, index) => (
+        // <Col key={index}>
+        <ProductCard key={index} p={p} />
+        // </Col>
+      ))}
     </>
-  )
-}
+  );
+};
 
-export default ListProducts
+export default ListProducts;

@@ -1,15 +1,15 @@
 import React from "react";
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Nav, NavLink, Row } from "react-bootstrap";
 import { BsSuitHeartFill } from "react-icons/bs";
-import "./productCard.css"
+import { Link } from "react-router-dom";
+import "./productCard.css";
 
-
-const ProductCard = ({p}) => {
+const ProductCard = ({ p }) => {
   return (
-    <Card className="shadow-lg border">
+    <Card className="card shadow-lg border  m-1 m-md-4 m-lg-2">
       <div>
         <Card.Img
-          className="card-img border-bottom "
+          className="card-img border-bottom img-fluid"
           variant="top"
           src={p.imagen}
         />
@@ -20,23 +20,14 @@ const ProductCard = ({p}) => {
           <BsSuitHeartFill />
         </Button>
       </div>
-      <Card.Body className="d-flex flex-column">
-        <div className="">
-          <div className="d-flex justify-content-between container p-0">
-            <Card.Title className="text-dark">{p.titulo}</Card.Title>
-          </div>
-          {/* <p className="bg-primary bg-opacity-10 rounded descripcion-card-producto">
-           
-          </p> */}
+      <Card.Body className="h-100 d-flex flex-column ">
+        <div>
+          <Link to="/product" className="text-decoration-none">
+            <div className="d-flex justify-content-between container p-0 text-center  h-100">
+              <Card.Title className="text-dark ">{p.titulo}</Card.Title>
+            </div>
+          </Link>
         </div>
-        {/* <div className="d-flex justify-content-around">
-          <Button variant="success" className="opacity-75 w-25 fs-3"> */}
-            {/* <MdShoppingCart /> */}
-          {/* </Button>
-          <Button variant="warning" className="opacity-75 fs-4">
-            Comprar
-          </Button>
-        </div> */}
       </Card.Body>
     </Card>
   );
