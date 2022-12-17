@@ -3,6 +3,7 @@ import axios from "axios";
 import UsersTabla from "./UsersTabla";
 import Pagination from "./Pagination";
 import { Button } from "react-bootstrap";
+import ReactPaginate from "react-paginate";
 
 const AdminUsers = () => {
     const [arraySearch, setArraySearch] = useState([])
@@ -11,6 +12,7 @@ const AdminUsers = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(10);
 
+    const pageCount = Math.ceil(test.length / postsPerPage)
     useEffect(() => {
         fetchPosts();
       }, []);
@@ -62,6 +64,17 @@ const AdminUsers = () => {
         </form>
       </div>
         <UsersTabla  posts={currentPosts} loading={loading}/>
+        <ReactPaginate 
+        previousLabel={"Previous"}
+        nextLabel={"Next"}
+        pageCount={pageCount}
+        onPageChange={paginate}
+        containerClassName={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName={"nextBttn"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+        />
         </div>
   );
 }
