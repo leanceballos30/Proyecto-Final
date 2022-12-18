@@ -4,9 +4,9 @@ import { BsSuitHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./productCard.css";
 
-const ProductCard = ({ p }) => {
+const ProductCard = ({ p}) => {
   return (
-    <Card className="card shadow-lg border  m-1 m-md-4 m-lg-2">
+    <Card  className="card shadow-lg border m-sx-3 ">
       <div>
         <Card.Img
           className="card-img border-bottom img-fluid"

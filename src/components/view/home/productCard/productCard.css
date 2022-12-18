@@ -22,9 +22,9 @@ img.card-img {
   height: "12rem";
 }
 
-@media (width <= 576px) {
+/* @media (width <= 576px) {
   .card {
     width: 40%;
     height: auto;
   }
-}
+} */
