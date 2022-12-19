@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import ProductosCategorias from "./Productos_categoria";
+import ProductosCategorias from "../Productos_categoria";
 
-const Electrodomesticos = () => {
+const AireLibre = () => {
     const [test, setTest] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -13,7 +13,7 @@ const Electrodomesticos = () => {
       const fetchPosts = async () => {
         setLoading(true);
         const res = await axios.get(
-          "https://jsonplaceholder.typicode.com/albums/1/photos"
+          "https://jsonplaceholder.typicode.com/albums/3/photos"
         );
         setTest(res.data);
         setLoading(false);
@@ -28,4 +28,4 @@ const Electrodomesticos = () => {
   )
 }
 
-export default Electrodomesticos
+export default AireLibre
