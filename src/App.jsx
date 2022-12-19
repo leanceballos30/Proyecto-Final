@@ -4,7 +4,7 @@ import {RouterPrincipal} from './routers/RouterPrincipal'
 function App() {
 
   return (
-    <div>
+    <div className='container d-flex justify-content-center'>
      <RouterPrincipal/>
     </div>
   )

@@ -8,6 +8,7 @@ const UsersTabla = ({ posts, loading }) => {
       }
 
   return (
+    <div className="d-flex w-100">
     <Table striped bordered hover>
           <thead>
             <tr>
@@ -28,6 +29,7 @@ const UsersTabla = ({ posts, loading }) => {
       </tr>))}
           </tbody>
         </Table>
+        </div>
   )
 }
 

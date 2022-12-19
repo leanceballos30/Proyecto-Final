@@ -3,7 +3,6 @@ import axios from "axios";
 import UsersTabla from "./UsersTabla";
 import Pagination from "./Pagination";
 import { Button } from "react-bootstrap";
-import ReactPaginate from "react-paginate";
 
 const AdminUsers = () => {
     const [arraySearch, setArraySearch] = useState([])
@@ -12,7 +11,6 @@ const AdminUsers = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(10);
 
-    const pageCount = Math.ceil(test.length / postsPerPage)
     useEffect(() => {
         fetchPosts();
       }, []);
@@ -38,16 +36,21 @@ const AdminUsers = () => {
         let productoEncontrado = test.filter(producto => {
           return producto.title.toLowerCase().includes(search.toLowerCase())
         })
+        if (productoEncontrado.length <= 0) {
+          return alert("no se encontro producto")
+        }
         setArraySearch(productoEncontrado)
+        paginate(1)
       }
   return (
-    <div>
-         <div className="d-flex container justify-content-around mt-2">
-        <div className="d-none d-lg-block col-6 justify-content-center align-items-center">
+    <div className="container">
+         <div className="d-flex container justify-content-center mt-2">
+        <div className="col-6 d-flex d-none d-md-block justify-content-center align-items-center">
           <Pagination
             postsPerPage={postsPerPage}
             totalPosts={arraySearch.length > 0 ? arraySearch.length : test.length}
             paginate={paginate}
+            currentPage={currentPage}
           />
         </div>
         <form onSubmit={buscarProducto} className="d-flex flex-column col-12 justify-content-around col-md-6 my-2 align-items-center">
@@ -63,18 +66,17 @@ const AdminUsers = () => {
         </div>
         </form>
       </div>
+      <div className="w-100">
         <UsersTabla  posts={currentPosts} loading={loading}/>
-        <ReactPaginate 
-        previousLabel={"Previous"}
-        nextLabel={"Next"}
-        pageCount={pageCount}
-        onPageChange={paginate}
-        containerClassName={"paginationBttns"}
-        previousLinkClassName={"previousBttn"}
-        nextLinkClassName={"nextBttn"}
-        disabledClassName={"paginationDisabled"}
-        activeClassName={"paginationActive"}
-        />
+        </div>
+        <div className="col-12 d-flex d-block d-md-none container justify-content-center align-items-center">
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={arraySearch.length > 0 ? arraySearch.length : test.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
+        </div>
         </div>
   );
 }
