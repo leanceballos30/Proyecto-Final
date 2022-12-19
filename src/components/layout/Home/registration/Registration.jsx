@@ -22,11 +22,11 @@ const Registration = () => {
         </Button>
       ))}
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Rolling Store</Modal.Title>
+        <Modal.Header className="modal-header" closeButton>
+          <Modal.Title className="text-white">Rolling Store</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4 className="text-center fw-bold">Registro</h4>
+          <h4 className="text-center ">Registrarse</h4>
           <div>
             <Form>
 
